@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Política de Privacidade · Faturamento TISS</title>
+  <meta name="description" content="Como o Faturamento TISS trata os dados da clínica e usa o Google Drive para os backups.">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <header>
+    <div class="topo">
+      <a class="marca" href="./"><span class="logo">FT</span> Faturamento TISS</a>
+      <nav>
+        <a href="./">Início</a>
+        <a href="privacidade.html">Privacidade</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="documento">
+      <h1>Política de Privacidade</h1>
+      <p class="vigencia">Vigente desde 27 de setembro de 2026.</p>
+
+      <p class="aviso">Resumo: os dados ficam no computador da clínica, criptografados. O desenvolvedor não recebe nenhum dado.
+        O Google Drive é usado só para guardar as cópias de segurança, criptografadas, no Drive da própria clínica, e o programa
+        acessa apenas os arquivos que ele mesmo cria.</p>
+
+      <h2>1. Quem somos</h2>
+      <p>O Faturamento TISS é um programa para Windows usado por clínicas e prestadores de serviços de saúde para faturar
+        atendimentos aos planos de saúde no Padrão TISS da Agência Nacional de Saúde Suplementar (ANS).
+        Contato: <a href="mailto:brunofcordeiro1@gmail.com">brunofcordeiro1@gmail.com</a>.</p>
+
+      <h2>2. Quais dados o programa trata</h2>
+      <p>Para faturar, a clínica registra no programa dados de beneficiários (nome e número da carteirinha), dos atendimentos
+        e procedimentos, dos profissionais de saúde (nome, conselho, CBO e CPF), dos hospitais, dos convênios e dos usuários do
+        programa. Dados de saúde são dados pessoais sensíveis pela Lei Geral de Proteção de Dados (LGPD, Lei nº 13.709/2018).</p>
+      <p>A clínica é a <strong>controladora</strong> desses dados e decide o que registrar. O programa é a ferramenta que ela usa
+        para cumprir as obrigações de faturamento com as operadoras.</p>
+
+      <h2>3. Onde os dados ficam</h2>
+      <ul>
+        <li>Num banco de dados no computador da clínica, <strong>criptografado</strong> (AES-256), que só abre com o login
+          de um usuário cadastrado.</li>
+        <li>O programa <strong>não envia dados ao desenvolvedor</strong> nem a terceiros. Os arquivos XML gerados são salvos
+          no computador, e a própria clínica os envia às operadoras.</li>
+        <li>As alterações feitas nas guias e cadastros ficam registradas num histórico de auditoria dentro do mesmo banco.</li>
+      </ul>
+
+      <h2>4. Uso do Google Drive (backup)</h2>
+      <p>Se a clínica decidir conectar uma conta Google, o programa usa o Google Drive para guardar as cópias de segurança (backups):</p>
+      <ul>
+        <li><strong>Permissão pedida:</strong> apenas <code>drive.file</code>, que dá acesso somente aos arquivos que o próprio
+          programa criou. O programa <strong>não vê nem acessa</strong> nenhum outro arquivo do seu Google Drive.
+          Também é lido o e-mail da conta, só para mostrar na tela qual conta está conectada.</li>
+        <li><strong>Para que é usada:</strong> criar a pasta "FaturamentoTiss Backups" e, dentro dela, enviar, listar, baixar
+          (para restaurar) e apagar os backups mais antigos, conforme a quantidade configurada pela clínica.</li>
+        <li><strong>Criptografia:</strong> cada backup é criptografado no computador <strong>antes</strong> de ser enviado.
+          Nem o Google nem o desenvolvedor conseguem ler o conteúdo; para abri-lo é preciso um usuário e senha do programa
+          ou a chave de recuperação da clínica.</li>
+        <li><strong>Autorização:</strong> a autorização concedida pelo Google fica guardada, criptografada, apenas no computador da
+          clínica. O desenvolvedor não recebe essa autorização e não tem acesso ao Google Drive de nenhum cliente.</li>
+        <li><strong>Sem outros usos:</strong> os dados obtidos pelas APIs do Google não são vendidos, não são usados para
+          publicidade, não são transferidos a terceiros e não são usados para nenhuma outra finalidade além do backup.</li>
+      </ul>
+      <p>O uso e a transferência, para qualquer outro aplicativo, de informações recebidas das APIs do Google obedecem à
+        <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de Dados do Usuário dos Serviços
+        de API do Google</a>, incluindo os requisitos de Uso Limitado.</p>
+
+      <h2>5. Como desconectar o Google Drive</h2>
+      <p>Na tela de Backup do programa, use o botão <strong>Desconectar</strong>. Também é possível retirar a permissão a qualquer
+        momento em <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. Os backups já enviados
+        continuam no seu Drive até que você os apague.</p>
+
+      <h2>6. Por quanto tempo os dados são mantidos</h2>
+      <p>Os dados ficam no computador da clínica enquanto ela os mantiver. No Google Drive, o programa mantém apenas os backups
+        mais recentes, na quantidade configurada pela clínica (30 por padrão), e apaga os mais antigos.</p>
+
+      <h2>7. Direitos dos titulares</h2>
+      <p>Pacientes e profissionais que queiram exercer os direitos previstos na LGPD (acesso, correção, eliminação, entre outros)
+        devem procurar a clínica responsável pelo atendimento, que é a controladora dos dados.</p>
+
+      <h2>8. Alterações desta política</h2>
+      <p>Esta política pode ser atualizada. A data de vigência no topo da página indica a versão em vigor.</p>
+
+      <h2>9. Contato</h2>
+      <p>Dúvidas sobre esta política: <a href="mailto:brunofcordeiro1@gmail.com">brunofcordeiro1@gmail.com</a>.</p>
+    </article>
+  </main>
+
+  <footer>
+    <p>Faturamento TISS · <a href="./">Início</a></p>
+  </footer>
+</body>
+</html>
